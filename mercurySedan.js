@@ -13,7 +13,7 @@
 //TO DO: Code the Car subclass here or in index.js file, i.e. class Car extends Vehicle ...
 
 class Car extends Vehicle {
-    constructor(maxPassengers, passengers, numberOfWheels, maximumSpeed, fuel, scheduleService) {
+    constructor(make, model, year, color, mileage, maxPassengers, passengers, numberOfWheels, maximumSpeed, fuel, scheduleService) {
         super(make, model, year, color, mileage);
         this.maxPassengers = maxPassengers;
         this.passengers = passengers;
@@ -55,11 +55,12 @@ class Car extends Vehicle {
 let v = new Vehicle("Mercury", "Sedan", "1965", "red", "8500");
 console.log(v.make)
 
-let newCar = new Car(5, 0, 4, 160, 10, false)
+let newCar = new Car("Mercury", "Sedan", "1965", "red", "8500", 5, 0, 4, 160, 10, false)
 
 newCar.loadPassenger(4)
 newCar.start()
 newCar.checkService()
+
 
 
 
